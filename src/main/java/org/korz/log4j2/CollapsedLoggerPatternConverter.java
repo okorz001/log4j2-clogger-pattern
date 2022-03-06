@@ -8,6 +8,9 @@ import org.apache.logging.log4j.core.pattern.NameAbbreviator;
 import org.apache.logging.log4j.core.pattern.PatternConverter;
 import org.apache.logging.log4j.util.PerformanceSensitive;
 
+/**
+ * Formats a logger name, abbreviating packages until the name is short enough.
+ */
 @Plugin(name = "CollapsedLoggerPatternConverter", category = PatternConverter.CATEGORY)
 @ConverterKeys({ "lo", "clogger", "collapsedlogger" })
 @PerformanceSensitive("allocation")

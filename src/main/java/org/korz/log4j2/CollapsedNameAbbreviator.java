@@ -3,6 +3,9 @@ package org.korz.log4j2;
 import org.apache.logging.log4j.core.pattern.NameAbbreviator;
 import org.apache.logging.log4j.util.PerformanceSensitive;
 
+/**
+ * A NameAbbreviator that abbreviates packages until the name is short enough.
+ */
 @PerformanceSensitive("allocation")
 public class CollapsedNameAbbreviator extends NameAbbreviator {
 
@@ -11,15 +14,25 @@ public class CollapsedNameAbbreviator extends NameAbbreviator {
     private final int max;
     private final char delimiter;
 
+    /**
+     * Creates a new abbreviator using the default delimiter.
+     * @param max The maximum name length.
+     */
     public CollapsedNameAbbreviator(int max) {
         this(max, DEFAULT_DELIMITER);
     }
 
+    /**
+     * Creates a new abbreviator using the default delimiter.
+     * @param max The maximum name length.
+     * @param delimiter The character that separates words.
+     */
     public CollapsedNameAbbreviator(int max, char delimiter) {
         this.max = max;
         this.delimiter = delimiter;
     }
 
+    @Override
     public void abbreviate(String original, StringBuilder destination) {
         if (max == 0) {
             // if not found: -1 + 1 = 0, so the entire string is used
