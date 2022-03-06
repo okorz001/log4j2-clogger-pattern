@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <File name="file" fileName="target/logs/length-0.txt" immediateFlush="true">
+      <PatternLayout pattern="%logger%n%clogger{0}%n"/>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="file"/>
+    </Root>
+  </Loggers>
+</Configuration>

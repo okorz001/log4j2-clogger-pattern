@@ -1,0 +1,3 @@
+*         text
+*.cmd     eol=crlf
+*.jar     -text
