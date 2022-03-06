@@ -74,6 +74,26 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
       </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.2.7</version>
+        <configuration>
+          <flattenMode>ossrh</flattenMode>
+          <flattenedPomFilename>flattened-pom.xml</flattenedPomFilename>
+          <outputDirectory>${project.build.directory}</outputDirectory>
+          <flattenDependencyMode>direct</flattenDependencyMode>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
