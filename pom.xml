@@ -7,6 +7,40 @@
   <artifactId>log4j2-clogger-pattern</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
+  <name>Log4J2 Clogger Pattern</name>
+  <description>Log4J2 plugin inspired by Logback's %logger</description>
+  <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Oscar Korz</name>
+      <email>okorz001@gmail.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
