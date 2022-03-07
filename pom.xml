@@ -4,7 +4,7 @@
 
   <groupId>org.korz</groupId>
   <artifactId>log4j2-clogger-pattern</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
 
   <name>Log4J2 Clogger Pattern</name>
   <description>Log4J2 plugin inspired by Logback's %logger</description>
@@ -29,7 +29,7 @@
     <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
     <connection>scm:git:https://github.com/okorz001/log4j2-clogger-pattern.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/okorz001/log4j2-clogger-pattern.git</developerConnection>
-    <tag>log4j2-clogger-pattern-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
