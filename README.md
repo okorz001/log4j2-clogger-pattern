@@ -1,10 +1,25 @@
 # log4j2-clogger-pattern
 
+[![Maven Central](https://img.shields.io/maven-central/v/org.korz/log4j2-clogger-pattern.svg)](https://search.maven.org/artifact/org.korz/log4j2-clogger-pattern)
+
 A Log4J2 plugin that provides a `%clogger` pattern inspired by [Logback's
 `%logger` pattern][logback-logger].
 
 "clogger" is short for "collapsed logger", *not* a [clog][clog-wiki]
 aficionado.
+
+## Dependency
+
+This project is published to Maven Central.
+
+```xml
+<dependency>
+  <groupId>org.korz</groupId>
+  <artifactId>log4j2-clogger-pattern</artifactId>
+  <version>1.0.0</version>
+  <scope>runtime</scope>
+</dependency>
+```
 
 ## Usage
 
