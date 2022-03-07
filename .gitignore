@@ -1,6 +1,10 @@
 # maven
 target/
 
+# maven-release-plugin
+release.properties
+pom.xml.*
+
 # idea
 .idea/
 *.iml
