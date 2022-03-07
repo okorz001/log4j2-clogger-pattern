@@ -28,6 +28,8 @@
 
   <scm>
     <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
+    <connection>scm:git:https://github.com/okorz001/log4j2-clogger-pattern.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:okorz001/log4j2-clogger-pattern.git</developerConnection>
   </scm>
 
   <distributionManagement>
