@@ -2,50 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>org.korz</groupId>
+    <artifactId>maven-parent</artifactId>
+    <version>1</version>
+    <relativePath />
+  </parent>
+
   <groupId>org.korz</groupId>
   <artifactId>log4j2-clogger-pattern</artifactId>
   <version>1.0.1-SNAPSHOT</version>
 
   <name>Log4J2 Clogger Pattern</name>
   <description>Log4J2 plugin inspired by Logback's %logger</description>
-  <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
-
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://opensource.org/licenses/mit-license.php</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>Oscar Korz</name>
-      <email>okorz001@gmail.com</email>
-    </developer>
-  </developers>
 
   <scm>
-    <url>https://github.com/okorz001/log4j2-clogger-pattern</url>
-    <connection>scm:git:https://github.com/okorz001/log4j2-clogger-pattern.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/okorz001/log4j2-clogger-pattern.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <dependencies>
     <dependency>
@@ -65,58 +38,9 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.0</version>
-        <configuration>
-          <release>8</release>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
-      </plugin>
-
-      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
-        <version>1.2.7</version>
-        <configuration>
-          <flattenMode>ossrh</flattenMode>
-          <flattenedPomFilename>flattened-pom.xml</flattenedPomFilename>
-          <outputDirectory>${project.build.directory}</outputDirectory>
-          <flattenDependencyMode>direct</flattenDependencyMode>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>flatten</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>release-profile</id>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>3.0.1</version>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
